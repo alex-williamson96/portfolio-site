@@ -14,12 +14,12 @@ const NavBar = () => {
   }
 
   return (
-    <div className="navbar bg-neutral text-neutral-content fixed justify-center z-50">
-      <button className="btn btn-ghost normal-case lg:text-xl md:text-lg " onClick={() => goToSection('about')}>About</button>
-      <button className="btn btn-ghost normal-case lg:text-xl md:text-lg " onClick={() => goToSection('skills')}>Skills</button>
-      <button className="btn btn-ghost normal-case lg:text-xl md:text-lg" onClick={() => goToSection('projects')}>Projects</button>
-      <button className="btn btn-ghost normal-case lg:text-xl md:text-lg" onClick={() => goToSection('resume')}>Resume</button>
-      <button className="btn btn-ghost normal-case lg:text-xl md:text-lg" onClick={() => goToSection('contact')}>Contact</button>
+    <div className="navbar bg-neutral text-neutral-content fixed justify-center z-50 pl-4 pr-4 w-full">
+      <button className="btn btn-ghost normal-case sm:text-lg text-xs" onClick={() => goToSection('about')}>About</button>
+      <button className="btn btn-ghost normal-case sm:text-lg text-xs" onClick={() => goToSection('skills')}>Skills</button>
+      <button className="btn btn-ghost normal-case sm:text-lg text-xs" onClick={() => goToSection('projects')}>Projects</button>
+      <button className="btn btn-ghost normal-case sm:text-lg text-xs" onClick={() => goToSection('resume')}>Resume</button>
+      <button className="btn btn-ghost normal-case sm:text-lg text-xs" onClick={() => goToSection('contact')}>Contact</button>
 
     </div>
   )

@@ -10,7 +10,7 @@ function App() {
   return (
     <>
       <NavBar />
-      <div className='pt-16 sm:pt-8'>
+      <div className='pt-16'>
         <About />
         <Skills />
         <Projects />
