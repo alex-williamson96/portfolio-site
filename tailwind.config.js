@@ -11,7 +11,7 @@ export default {
   },
   plugins: [daisyui],
   daisyui: {
-    themes: ["forest", "autumn"],
+    themes: ["coffee", "autumn"],
   },
 }
 

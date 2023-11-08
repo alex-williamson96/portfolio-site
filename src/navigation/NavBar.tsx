@@ -1,11 +1,26 @@
 const NavBar = () => {
 
+  const goToSection = (id: string) => {
+    const el = document.getElementById(id);
+
+    if (el === null) {
+      return null
+    }
+
+    window.scrollTo({
+      behavior: 'smooth',
+      top: el.offsetTop
+    })
+  }
+
   return (
-    <div className="navbar bg-neutral text-neutral-content fixed justify-center">
-      <a className="btn btn-ghost normal-case text-xl" href="#">Alex Williamson</a>
-      <a className="btn btn-ghost normal-case text-xl" href="#">Projects</a>
-      <a className="btn btn-ghost normal-case text-xl" href="#">Resume</a>
-      <a className="btn btn-ghost normal-case text-xl" href="#">Contact</a>
+    <div className="navbar bg-neutral text-neutral-content fixed justify-center z-50">
+      <button className="btn btn-ghost normal-case lg:text-xl md:text-lg " onClick={() => goToSection('about')}>About</button>
+      <button className="btn btn-ghost normal-case lg:text-xl md:text-lg " onClick={() => goToSection('skills')}>Skills</button>
+      <button className="btn btn-ghost normal-case lg:text-xl md:text-lg" onClick={() => goToSection('projects')}>Projects</button>
+      <button className="btn btn-ghost normal-case lg:text-xl md:text-lg" onClick={() => goToSection('resume')}>Resume</button>
+      <button className="btn btn-ghost normal-case lg:text-xl md:text-lg" onClick={() => goToSection('contact')}>Contact</button>
+
     </div>
   )
 }
