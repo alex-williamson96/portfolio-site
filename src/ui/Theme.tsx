@@ -51,7 +51,7 @@ const Theme = () => {
     htmlElement.setAttribute('data-theme', theme);
   }, [theme]);
   return (
-    <div className="tooltip tooltip-bottom tooltip-primary" data-tip={'current theme: ' + theme}>
+    <div className="sm:tooltip sm:tooltip-bottom sm:tooltip-primary" data-tip={'current theme: ' + theme}>
       <label className="swap swap-rotate p-4 hover:bg-neutral hover:rounded-xl">
         <input onClick={toggleTheme} type="checkbox" />
         <div className="swap-on tooltip">
