@@ -4,7 +4,7 @@ const SkillCard = (props: { name: string, category: string, onSkillSelect: (cate
 
   return (
     <div className="p-2 flex w-fit">
-      <div onClick={() => props.onSkillSelect(props.category)} className={props.selectedSkill !== props.category ? defaultStyles : defaultStyles + ' bg-primary-focus'}>
+      <div onClick={() => props.onSkillSelect(props.category)} className={props.selectedSkill !== props.category ? defaultStyles : defaultStyles + ' bg-secondary-focus'}>
         {props.name}
       </div>
     </div>
