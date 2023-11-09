@@ -5,11 +5,10 @@ const About = () => {
       <div className="hero">
         <div className="hero-content flex-col lg:flex-row">
           <img src="/portfolio-site/public/alex.jpg" className="rounded-lg shadow-2xl sm:w-full" />
-          <img src="/portfolio-site/src/assets/alex.jpg" className="rounded-lg shadow-2xl sm:w-full" />
+          <img src="/public/alex.jpg" className="rounded-lg shadow-2xl sm:w-full" />
           <img src="../public/alex.jpg" className="rounded-lg shadow-2xl sm:w-full" />
           <img src="./public/alex.jpg" className="rounded-lg shadow-2xl sm:w-full" />
-          <img src="/public/alex.jpg" className="rounded-lg shadow-2xl sm:w-full" />
-          <img src="../assets/alex.jpg" className="rounded-lg shadow-2xl sm:w-full" />
+          <img src="/alex.jpg" className="rounded-lg shadow-2xl sm:w-full" />
           <div>
             <h1 className="lg:text-6xl font-bold sm:text-4xl md:text-6xl">Hi, I'm Alex Williamson a full-stack developer</h1>
             <p className="lg:py-6 md:py-4 sm:py-2 lg:text-xl md:text-xl sm:text-lg pl-4">I currently work at FedEx where I use my skills to
