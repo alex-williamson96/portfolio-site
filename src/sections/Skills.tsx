@@ -77,13 +77,13 @@ const Skills = () => {
           <h1 className="lg:text-6xl md:text-4xl sm:text-2xl p-4">Skills</h1>
           <div className="sm:h-1/5 border-4 rounded border-neutral flex items-center sm:justify-between w-4/5 sm:p-6 pl:4 overflow-x-scroll h-auto min-h-1/5" id="stack">
             {titleCards.map(({ name, category }) => (
-              <SkillCard key={name} name={name} category={category} onSkillSelect={handleSkillSelect} />
+              <SkillCard key={name} name={name} category={category} onSkillSelect={handleSkillSelect} selectedSkill={skill} />
             ))}
           </div>
           <div className="p-3"></div>
           <div className="border-4 rounded border-neutral flex items-start flex-wrap p-4 content-start h-auto overflow-scroll w-4/5" id="tech">
             {shuffleArray(filteredSkillCard).map(({ name, category }) => (
-              <SkillCard key={name} name={name} category={category} onSkillSelect={handleSkillSelect} />
+              <SkillCard key={name} name={name} category={category} onSkillSelect={handleSkillSelect} selectedSkill="" />
             ))}
           </div>
         </div>
