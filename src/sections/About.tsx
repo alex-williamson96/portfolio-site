@@ -4,7 +4,7 @@ const About = () => {
     <section className="lg:p-16 md:p-8 sm:p-2" id="about">
       <div className="hero">
         <div className="hero-content flex-col lg:flex-row">
-          <img src="/alex.jpg" className="rounded-lg shadow-2xl sm:w-full" />
+          <img src="/portfolio-site/public/alex.jpg" className="rounded-lg shadow-2xl sm:w-full" />
           <img src="/portfolio-site/src/assets/alex.jpg" className="rounded-lg shadow-2xl sm:w-full" />
           <img src="../public/alex.jpg" className="rounded-lg shadow-2xl sm:w-full" />
           <img src="./public/alex.jpg" className="rounded-lg shadow-2xl sm:w-full" />
