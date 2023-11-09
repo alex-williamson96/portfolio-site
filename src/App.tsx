@@ -8,7 +8,7 @@ function App() {
   // const [count, setCount] = useState(0)
   console.log('In App')
   return (
-    <>
+    <div className="bg-gradient-to-r from-base-100 via-base-200 to-base-200">
       <NavBar />
       <div className='pt-16'>
         <About />
@@ -16,7 +16,7 @@ function App() {
         <Projects />
       </div>
 
-    </>
+    </div>
   )
 }
 

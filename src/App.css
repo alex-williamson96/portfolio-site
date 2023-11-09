@@ -1,3 +1,10 @@
 .min-h-1\/5 {
   min-height: 20%;
 }
+
+.transform-image img {
+  transition: transform .5s ease;
+}
+.transform-image-hover img {
+  transform: scale(1.5);
+}
