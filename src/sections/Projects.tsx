@@ -28,7 +28,7 @@ const Projects = () => {
       </div>
       <div className="carousel carousel-center p-4 space-x-4 bg-neutral rounded-box" ref={carousel}>
         <div className="carousel-item lg:w-1/3 w-11/12 overflow-hidden relative group">
-          <img src="/portfolio-site/src/assets/man.jpg" className="rounded-box hover:transform hover:scale-150 hover:opacity-25 duration-700 ease-in-out" title="see more" />
+          <img src="/man.jpg" className="rounded-box hover:transform hover:scale-150 hover:opacity-25 duration-700 ease-in-out" title="see more" />
           <div className="opacity-0 group-hover:opacity-100 duration-300 absolute inset-x-0 bottom-0 flex justify-center align-top text-xl bg-transparent "><button className="btn">Learn more here</button></div>
         </div>
         <div className="carousel-item lg:w-1/3 w-11/12 overflow-hidden relative group">
