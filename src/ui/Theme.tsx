@@ -14,7 +14,6 @@ const Theme = () => {
     "lofi",
     "pastel",
     "fantasy",
-    "wireframe",
     "cmyk",
     "autumn",
     "acid",
