@@ -9,17 +9,18 @@ import Footer from './ui/Footer'
 function App() {
   // const [count, setCount] = useState(0)
   return (
-    <><div className="bg-gradient-to-r from-base-100 via-base-200 to-base-200">
-      <NavBar />
-      <div className='pt-16'>
-        <About />
-        <Skills />
-        <Projects />
-        <Resume />
+    <>
+      <div className="bg-gradient-to-r from-base-100 to-base-300">
+        <NavBar />
+        <div className='pt-16'>
+          <About />
+          <Skills />
+          <Projects />
+          <Resume />
+        </div>
       </div>
-
-    </div>
-    <Footer /></>
+      <Footer />
+    </>
   )
 }
 

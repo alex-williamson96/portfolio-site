@@ -48,9 +48,12 @@ const Projects = () => {
           <div className="opacity-0 group-hover:opacity-100 duration-300 absolute inset-x-0 bottom-0 flex justify-center align-top text-xl bg-transparent"><button className="btn">Learn more here</button></div>
         </div>
       </div>
-      <div className="flex justify-center w-full py-2 gap-2">
-        <button className="btn btn-circle tooltip tooltip-left" data-tip="scroll left" onClick={() => scrollCarousel(true)}>❮</button>
-        <button className="btn btn-circle tooltip tooltip-right" data-tip="scroll right" onClick={() => scrollCarousel(false)}>❯</button>
+      <div className="flex justify-center w-full py-2 gap-2 pt-4">
+        <div className="bg-neutral rounded-2xl w-fit p-5">
+          <button className="btn btn-lg btn-circle tooltip tooltip-left" data-tip="scroll left" onClick={() => scrollCarousel(true)}>❮</button>
+          <span className="p-4"></span>
+          <button className="btn btn-lg btn-circle tooltip tooltip-right" data-tip="scroll right" onClick={() => scrollCarousel(false)}>❯</button>
+        </div>
       </div>
     </section>
   )
