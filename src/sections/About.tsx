@@ -3,7 +3,6 @@ import { useState } from "react";
 const About = () => {
 
   const [showMore, setShowMore] = useState(false)
-  console.log(showMore)
 
   return (
     <section className="pt-8" id="about">
