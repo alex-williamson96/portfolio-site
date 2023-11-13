@@ -1,6 +1,6 @@
 const Resume = () => {
   return (
-      <section className="h-fit pb-12" id="resume">
+    <section className="h-fit pb-12 pt-16" id="resume">
       <div className="flex justify-center">
         <h1 className="sm:text-6xl text-2xl p-4">Resume</h1>
       </div>

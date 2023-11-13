@@ -22,7 +22,7 @@ const Projects = () => {
   }
 
   return (
-    <section className="p-6 sm:pb-72" id="projects">
+    <section className="p-6 sm:pb-72 pt-24" id="projects">
       <div className="flex justify-center p-4">
         <h1 className="lg:text-6xl md:text-4xl sm:text-2xl p-4">Projects</h1>
       </div>

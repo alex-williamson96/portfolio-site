@@ -7,7 +7,7 @@ const About = () => {
   const link = "text-primary underline hover:text-primary-focus visited:text-secondary"
 
   return (
-    <section className="pt-8" id="about">
+    <section className="pt-16" id="about">
       <div className="hero">
         <div className="hero-content flex-col lg:flex-row">
           {/* <img src="./assets/alex.jpg" className="rounded-lg shadow-2xl sm:w-full mask mask-squircle" /> */}
@@ -40,7 +40,7 @@ const About = () => {
           <p className="pb-8">
             You can <a className={link} href="mailto:arthurwilliamson96@gmail.com">email me here</a> or message me directly on <a target="_blank" className={link} href="https://www.linkedin.com/in/alex-williamson-dev" rel="noopener">LinkedIn</a>.
           </p>
-          <p className="pb-8">
+          <p>
             My skills are listed below along with my projects which you can also find <a target="_blank" className={link} href="https://github.com/alex-williamson96" rel="noopener">here.</a>
           </p>
         </div>}
