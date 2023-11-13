@@ -5,85 +5,85 @@ const Skills = () => {
 
   interface SkillCard {
     name: string;
-    category: string;
+    category: string[];
   }
 
   const skillCards: SkillCard[] = [
-    { name: "Spring Boot", category: "backend" },
-    { name: "Java", category: "language" },
-    { name: "TypeScript", category: "language" },
-    { name: "JavaScript", category: "language" },
-    { name: "Python", category: "language" },
-    { name: "React", category: "frontend" },
-    { name: "Angular", category: "frontend" },
-    { name: "Jenkins", category: "devops" },
-    { name: "Groovy", category: "devops" },
-    { name: "GitHub Actions", category: "devops" },
-    { name: "Docker", category: "devops" },
-    { name: "HTML", category: "language" },
-    { name: "CSS", category: "language" },
-    { name: "Kotlin", category: "language" },
-    { name: "JUnit", category: "tool" },
-    { name: "Mockito", category: "tool" },
-    { name: "Git", category: "tool" },
-    { name: "GitHub", category: "tool" },
-    { name: "GitLab", category: "tool" },
-    { name: "Gradle", category: "tool" },
-    { name: "Maven", category: "tool" },
-    { name: "Postman", category: "tool" },
-    { name: "Insomnia", category: "tool" },
-    { name: "NumPy", category: "tool" },
-    { name: "TailwindCSS", category: "frontend" },
-    { name: "Angular Material", category: "frontend" },
-    { name: "Bootstrap", category: "frontend" },
-    { name: "Oracle SQL", category: "backend" },
-    { name: "PostgreSQL", category: "backend" },
-    { name: "MySQL", category: "backend" },
-    { name: "SQL", category: "language" }
+    { name: "Spring Boot", category: ["backend"] },
+    { name: "Java", category: ["language", "backend"] },
+    { name: "TypeScript", category: ["language", "frontend"] },
+    { name: "JavaScript", category: ["language", "frontend"] },
+    { name: "Python", category: ["language"] },
+    { name: "React", category: ["frontend"] },
+    { name: "Angular", category: ["frontend"] },
+    { name: "Groovy", category: ["backend"] },
+    { name: "GitHub Actions", category: ["backend"] },
+    { name: "Docker", category: ["backend"] },
+    { name: "HTML", category: ["language", "frontend"] },
+    { name: "CSS", category: ["language", "frontend"] },
+    { name: "Kotlin", category: ["language", "backend"] },
+    { name: "JUnit", category: ["tool", "backend"] },
+    { name: "Mockito", category: ["tool", "backend"] },
+    { name: "Git", category: ["tool"] },
+    { name: "GitHub", category: ["tool"] },
+    { name: "GitLab", category: ["tool"] },
+    { name: "Gradle", category: ["tool"] },
+    { name: "Maven", category: ["tool", "backend"] },
+    { name: "Postman", category: ["tool"] },
+    { name: "Insomnia", category: ["tool"] },
+    { name: "NumPy", category: ["tool"] },
+    { name: "TailwindCSS", category: ["frontend"] },
+    { name: "Angular Material", category: ["frontend"] },
+    { name: "Bootstrap", category: ["frontend"] },
+    { name: "IntelliJ", category: ["tool"] },
+    { name: "VSCode", category: ["tool"] },
+    { name: "Oracle SQL", category: ["database"] },
+    { name: "PostgreSQL", category: ["database"] },
+    { name: "Hibernate", category: ["database", "backend"] },
+    { name: "JDBC", category: ["database", "backend"] },
+    { name: "MySQL", category: ["database"] },
+    { name: "SQL", category: ["language"] },
+    { name: "Jenkins", category: ["backend"] },
   ];
 
   const titleCards: SkillCard[] = [
-    { name: "Languages", category: "language" },
-    { name: "Frontend", category: "frontend" },
-    { name: "Backend", category: "backend" },
-    { name: "DevOps", category: "devops" },
-    { name: "Tools", category: "tool" },
+    { name: "Languages", category: ["language"] },
+    { name: "Frontend", category: ["frontend"] },
+    { name: "Backend", category: ["backend"] },
+    { name: "Database", category: ["database"] },
+    { name: "Tools", category: ["tool"] },
   ]
 
-  const [skill, setSkill] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState('');
 
-  const filteredSkillCard = skillCards.filter(
+  const filteredSkillCards = skillCards.filter(
     card => {
-      if (skill === '') {
+      if (selectedCategory === '') {
         return true
       }
-      return card.category === skill
+      return card.category.includes(selectedCategory)
     }
   )
 
-  const handleSkillSelect = (selectedSkill: string) => {
-    if (selectedSkill === skill) {
-      setSkill('')
-      return;
-    }
-
-    setSkill(selectedSkill);
-  }
+  const handleCategorySelect = (category: string) => {
+    console.log(selectedCategory)
+    setSelectedCategory(category === selectedCategory ? '' : category);
+  };
 
   return (
     <section className="w-screen" id="skills">
       <div className="pt-36 pb-36 pl-4 pr-4 flex justify-center w-screen">
         <div className="flex h-screen flex-col justify-center items-center w-screen">
           <h1 className="lg:text-6xl md:text-4xl sm:text-2xl p-4">Skills</h1>
-          <div className="sm:h-1/5 border-4 rounded border-neutral flex items-center sm:justify-between w-4/5 sm:p-6 pl:4 overflow-x-scroll h-auto min-h-1/5" id="stack">
+          <div className="sm:h-1/5 border-4 rounded border-secondary flex items-center sm:justify-between w-4/5 sm:p-6 pl:4 overflow-x-scroll h-auto min-h-1/5" id="stack">
             {titleCards.map(({ name, category }) => (
-              <SkillCard key={name} name={name} category={category} onSkillSelect={handleSkillSelect} selectedSkill={skill} />
+              <SkillCard key={name} name={name} category={category} onSkillSelect={handleCategorySelect} selectedCategory={selectedCategory} />
             ))}
           </div>
           <div className="p-3"></div>
-          <div className="border-4 rounded border-neutral flex items-start flex-wrap p-4 content-start h-auto overflow-scroll w-4/5" id="tech">
-            {shuffleArray(filteredSkillCard).map(({ name, category }) => (
-              <SkillCard key={name} name={name} category={category} onSkillSelect={handleSkillSelect} selectedSkill="" />
+          <div className="border-4 rounded border-secondary flex items-start flex-wrap p-4 content-start h-auto overflow-scroll w-4/5" id="tech">
+            {shuffleArray(filteredSkillCards).map(({ name, category }) => (
+              <SkillCard key={name} name={name} category={category} onSkillSelect={handleCategorySelect} selectedCategory="" />
             ))}
           </div>
         </div>

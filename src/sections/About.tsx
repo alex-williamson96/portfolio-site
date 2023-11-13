@@ -4,6 +4,8 @@ const About = () => {
 
   const [showMore, setShowMore] = useState(false)
 
+  const link = "text-primary underline hover:text-primary-focus visited:text-secondary"
+
   return (
     <section className="pt-8" id="about">
       <div className="hero">
@@ -19,7 +21,7 @@ const About = () => {
         </div>
       </div>
       <div className="flex align-middle justify-center ">
-        {showMore && <div className="text-2xl sm:w-3/4 justify-start p-4 bg-base-100 rounded-lg">
+        {showMore && <div className="text-2xl sm:w-3/4 justify-start p-4 bg-base-100 rounded-lg ls leading-relaxed">
           <p className="pb-8">
             Thanks for visiting my website! Let me tell you more about myself. I am a full-stack developer. On the backend, I mostly work with Spring Boot, and on the frontend, I specialize in Angular and React.
           </p>
@@ -36,7 +38,10 @@ const About = () => {
             In my free time, I like to go backpacking, play chess, and bake. Feel free to reach out to me about my professional experience or to hear about my latest hike or recipe.
           </p>
           <p className="pb-8">
-            You can <a className="text-primary underline hover:text-primary-focus" href="mailto:arthurwilliamson96@gmail.com">email me here</a> or message me directly on <a className="text-primary underline hover:text-primary-focus" href="https://www.linkedin.com/in/alex-williamson-dev">LinkedIn</a>.
+            You can <a className={link} href="mailto:arthurwilliamson96@gmail.com">email me here</a> or message me directly on <a target="_blank" className={link} href="https://www.linkedin.com/in/alex-williamson-dev" rel="noopener">LinkedIn</a>.
+          </p>
+          <p className="pb-8">
+            My skills are listed below along with my projects which you can also find <a target="_blank" className={link} href="https://github.com/alex-williamson96" rel="noopener">here.</a>
           </p>
         </div>}
 
