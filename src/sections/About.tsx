@@ -41,7 +41,7 @@ const About = () => {
             You can <a className={link} href="mailto:arthurwilliamson96@gmail.com">email me here</a> or message me directly on <a target="_blank" className={link} href="https://www.linkedin.com/in/alex-williamson-dev" rel="noopener">LinkedIn</a>.
           </p>
           <p>
-            My skills are listed below along with my projects which you can also find <a target="_blank" className={link} href="https://github.com/alex-williamson96" rel="noopener">here.</a>
+            My skills are listed below along with my projects which you can also find <a target="_blank" className={link} href="https://github.com/alex-williamson96" rel="noopener">here on GitHub.</a>
           </p>
         </div>}
 
