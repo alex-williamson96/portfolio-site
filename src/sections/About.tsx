@@ -38,7 +38,7 @@ const About = () => {
             In my free time, I like to go backpacking, play chess, and bake. Feel free to reach out to me about my professional experience or to hear about my latest hike or recipe.
           </p>
           <p className="pb-8">
-            You can <a className={link} href="mailto:arthurwilliamson96@gmail.com">email me here</a> or message me directly on <a target="_blank" className={link} href="https://www.linkedin.com/in/alex-williamson-dev" rel="noopener">LinkedIn</a>.
+            You can <a className={link} href="mailto:recruiting@alexwilliamson.codes">email me here</a> or message me directly on <a target="_blank" className={link} href="https://www.linkedin.com/in/alex-williamson-dev" rel="noopener">LinkedIn</a>.
           </p>
           <p>
             My skills are listed below along with my projects which you can also find <a target="_blank" className={link} href="https://github.com/alex-williamson96" rel="noopener">here on GitHub.</a>
