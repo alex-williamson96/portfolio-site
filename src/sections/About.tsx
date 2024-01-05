@@ -7,7 +7,7 @@ const About = () => {
   const link = "text-primary underline hover:text-primary-focus visited:text-secondary"
 
   return (
-    <section className="pt-16" id="about">
+    <section className="pt-16 text-base-content" id="about">
       <div className="hero">
         <div className="hero-content flex-col lg:flex-row">
           {/* <img src="./assets/alex.jpg" className="rounded-lg shadow-2xl sm:w-full mask mask-squircle" /> */}
