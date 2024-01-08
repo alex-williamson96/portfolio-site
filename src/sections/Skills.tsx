@@ -72,7 +72,7 @@ const Skills = () => {
 
   return (
     <section className="w-screen" id="skills">
-      <div className="pt-36 pb-36 pl-4 pr-4 flex justify-center w-screen">
+      <div className="pt-24 pb-36 pl-4 pr-4 flex justify-center w-screen">
         <div className="flex h-screen flex-col justify-center items-center w-screen">
           <h1 className="lg:text-6xl md:text-4xl sm:text-2xl p-4 text-base-content">Skills</h1>
           <div className="sm:h-1/5 border-4 rounded border-neutral-content flex items-center sm:justify-between w-4/5 sm:p-6 pl:4 overflow-x-scroll h-auto min-h-1/5" id="stack">
