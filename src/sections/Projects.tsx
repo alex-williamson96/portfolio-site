@@ -22,7 +22,7 @@ const Projects = () => {
   return (
     <section id="projects" className="pt-24 pl-6 pr-6">
       <h1 className="justify-center flex text-5xl">
-        Projects section coming Soon! Please visit my GitHub in the meantime!
+        Projects section coming soon! Please visit my GitHub in the meantime!
       </h1>
     </section>
   );
