@@ -12,9 +12,9 @@ const About = () => {
         <div className="hero-content flex-col lg:flex-row">
           {/* <img src="./assets/alex.jpg" className="rounded-lg shadow-2xl sm:w-full mask mask-squircle" /> */}
           <div className="pl-4 sm:pl-8">
-            <h1 className="font-bold sm:text-4xl md:text-6xl text-3xl pb-4">Hi, I'm Alex Williamson a full-stack developer</h1>
-            <p className="lg:py-6 md:py-4 sm:py-2 sm:text-2xl pl-4 text-2xl pb-4">I currently work at FedEx where I use my skills to
-              create and improve internal tools used for tracking incidents across the organization.
+            <h1 className="font-bold sm:text-4xl md:text-6xl text-3xl pb-4">Hi, I'm Alex Williamson a software engineer</h1>
+            <p className="lg:py-6 md:py-4 sm:py-2 sm:text-2xl pl-4 text-2xl pb-4">I currently work at Cox Automotive where I work on
+            the Data Platform team which organizes the data across all the brands Cox Automotive owns.
             </p>
             <button className="btn btn-primary" onClick={() => setShowMore(!showMore)}>See {showMore ? 'less' : 'more'} about me</button>
           </div>
@@ -23,12 +23,13 @@ const About = () => {
       <div className="flex align-middle justify-center ">
         {showMore && <div className="text-2xl sm:w-3/4 justify-start p-4 bg-base-100 rounded-lg ls leading-relaxed">
           <p className="pb-8">
-            Thanks for visiting my website! Let me tell you more about myself. I am a full-stack developer. On the backend, I mostly work with Spring Boot, and on the frontend, I specialize in Angular and React.
+            Thanks for visiting my website! Let me tell you more about myself. I am currently a software engineer with a focus on Spring Boot and AWS. 
+            I work closesly with Snowflake to provide smooth and secure data access for all our clients.
           </p>
           <p className="pb-8">
             After graduating from UGA, I worked as a chemical engineer. While I enjoyed the work, I was more interested by the data and programming aspect of my jobs.
             I realized I wanted to pursue a career in programming, so I taught myself Python and started making projects in my free time.
-            After months of learning and working on projects, I landed a job at FedEx.
+            After months of learning and working on projects, I landed a job at FedEx, where I worked for 2 years before joining Cox Automotive.
           </p>
           <p className="pb-8">
             I am currently enrolled at Georgia Tech in their OMSCS program, where I am getting a Masters in Computer Science.
