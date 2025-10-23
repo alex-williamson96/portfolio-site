@@ -10,32 +10,26 @@ const About = () => {
   return (
     <section className="pt-16 text-base-content" id="about">
       <Helmet>
-        <title>Alex Williamson - Software Engineer</title>
-        <meta
-          name="description"
-          content="Software engineer specializing in Spring Boot, AWS, and data platforms. Currently at Cox Automotive and Georgia Tech OMSCS student."/>
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://alex-williamson96.github.io/" />
-        <meta
-          property="og:title"
-          content="Alex Williamson - Software Engineer"/>
-        <meta
-          property="og:description"
-          content="Software engineer specializing in Spring Boot, AWS, and data platforms. Currently at Cox Automotive and Georgia Tech OMSCS student."/>
-        <meta
-          property="og:image"
-          content="https://alex-williamson96.github.io/preview-image.png"/>
-        <meta property="twitter:card" content="summary_large_image" />
-        <meta
-          property="twitter:title"
-          content="Alex Williamson - Software Engineer"/>
-        <meta
-          property="twitter:description"
-          content="Software engineer specializing in Spring Boot, AWS, and data platforms. Currently at Cox Automotive and Georgia Tech OMSCS student."/>
-        <meta
-          property="twitter:image"
-          content="https://alex-williamson96.github.io/preview-image.png"/>
-      </Helmet>
+  <title>Alex Williamson - Software Engineer</title>
+  <meta name="description" content="Software engineer specializing in Spring Boot, AWS, and data platforms. Currently at Cox Automotive and Georgia Tech OMSCS student." />
+  
+  {/* Open Graph Tags */}
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://alexwilliamson.codes/" />
+  <meta property="og:title" content="Alex Williamson - Software Engineer" />
+  <meta property="og:description" content="Software engineer specializing in Spring Boot, AWS, and data platforms. Currently at Cox Automotive and Georgia Tech OMSCS student." />
+  <meta property="og:image" content="https://alexwilliamson.codes/preview-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Alex Williamson - Software Engineer Portfolio" />
+  
+  {/* Twitter Cards */}
+  <meta property="twitter:card" content="summary_large_image" />
+  <meta property="twitter:url" content="https://alexwilliamson.codes/" />
+  <meta property="twitter:title" content="Alex Williamson - Software Engineer" />
+  <meta property="twitter:description" content="Software engineer specializing in Spring Boot, AWS, and data platforms. Currently at Cox Automotive and Georgia Tech OMSCS student." />
+  <meta property="twitter:image" content="https://alexwilliamson.codes/preview-image.png" />
+</Helmet>
       <div className="hero">
         <div className="hero-content flex-col lg:flex-row">
           <div className="max-w-xs md:max-w-sm sm:w-full rounded-lg shadow-2xl mask mask-squircle">
