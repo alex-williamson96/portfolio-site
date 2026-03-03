@@ -39,6 +39,11 @@ const Skills = () => {
   { name: "PostgreSQL", category: ["database"] },
   { name: "MySQL", category: ["database"] },
 
+  // AI/ML
+  { name: "Amazon Bedrock", category: ["cloud", "tool"] },
+  { name: "RAG", category: ["tool"] },
+  { name: "MCP", category: ["tool"] },
+
   // Monitoring & Observability
   { name: "CloudWatch", category: ["tool", "cloud"] },
   { name: "New Relic", category: ["tool"] },

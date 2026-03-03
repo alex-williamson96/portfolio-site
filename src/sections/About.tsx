@@ -57,7 +57,7 @@ const About = () => {
             After months of learning and working on projects, I landed a job at FedEx, where I worked for 2 years before joining Cox Automotive.
           </p>
           <p className="pb-8">
-            I am currently enrolled at Georgia Tech in their OMSCS program, where I am getting a Masters in Computer Science.
+            I am finishing my Masters in Computer Science at Georgia Tech (graduating May 2026).
             Being able to fill in the knowledge gaps from my self-teaching has been extremely meaningful and is helping me to become a better software engineer.
           </p>
           <p className="pb-8">

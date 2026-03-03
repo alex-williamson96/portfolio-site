@@ -3,7 +3,7 @@ const Footer = () => {
   return (
     <footer className="footer items-center p-4 bg-neutral text-base-content sm:pl-32 sm:pr-32">
       <aside className="items-center grid-flow-col">
-        <p>Copyright © 2023 - All rights reserved
+        <p>Copyright © 2026 - All rights reserved
         </p>
         <div className="p-2"></div>
         Find me here:
