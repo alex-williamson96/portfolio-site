@@ -54,7 +54,7 @@ const softwareEntries = [
 ];
 
 const EntryDot = ({ muted = false }: { muted?: boolean }) => (
-  <div className={`absolute -left-[2.6rem] top-1 w-4 h-4 rounded-full border-4 border-base-100 ${muted ? 'bg-base-content/30' : 'bg-primary'}`} />
+  <div className="absolute -left-[39px] top-1 w-4 h-4 rounded-full border-4 border-base-100 bg-primary" />
 );
 
 const Experience = () => {

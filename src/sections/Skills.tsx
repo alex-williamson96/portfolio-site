@@ -78,7 +78,12 @@ const Skills = () => {
     return arr;
   }, []);
 
-  const displayedCards = shuffledSkillCards;
+  const displayedCards = selectedCategory === ''
+    ? shuffledSkillCards
+    : [
+        ...shuffledSkillCards.filter(c => c.category.includes(selectedCategory)),
+        ...shuffledSkillCards.filter(c => !c.category.includes(selectedCategory)),
+      ];
 
   const handleCategorySelect = (category: string) => {
     setSelectedCategory(prev => prev === category ? '' : category);
@@ -98,7 +103,7 @@ const Skills = () => {
           ))}
         </motion.div>
         <div className="p-3"></div>
-        <motion.div className="flex flex-wrap w-full max-w-4xl border border-base-content/15 rounded-2xl p-4" id="tech" variants={staggerContainer} initial="hidden" whileInView="visible" viewport={{ once: true }}>
+        <motion.div layout className="flex flex-wrap w-full max-w-4xl border border-base-content/15 rounded-2xl p-4" id="tech" variants={staggerContainer} initial="hidden" whileInView="visible" viewport={{ once: true }}>
           {displayedCards.map(({ name, category }) => {
             const dimmed = selectedCategory !== '' && !category.includes(selectedCategory);
             return (
