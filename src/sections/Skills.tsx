@@ -92,8 +92,11 @@ const Skills = () => {
   return (
     <section className="w-full py-16" id="skills">
       <div className="flex flex-col items-center px-4">
-        <motion.h1 className="lg:text-6xl md:text-4xl sm:text-2xl p-4 text-base-content" variants={fadeInUp} initial="hidden" whileInView="visible" viewport={{ once: true }}>Skills</motion.h1>
-        <motion.div className="border-4 rounded border-neutral-content flex flex-wrap justify-center gap-1 w-full max-w-4xl p-4" id="stack" variants={staggerContainer} initial="hidden" whileInView="visible" viewport={{ once: true }}>
+        <motion.div className="flex flex-col items-center mb-6" variants={fadeInUp} initial="hidden" whileInView="visible" viewport={{ once: true }}>
+          <h1 className="text-3xl sm:text-4xl font-bold text-base-content">Skills</h1>
+          <div className="w-12 h-1 bg-primary rounded mt-2" />
+        </motion.div>
+        <motion.div className="flex flex-wrap justify-center w-full max-w-4xl border border-base-content/15 rounded-2xl p-4 gap-1" id="stack" variants={staggerContainer} initial="hidden" whileInView="visible" viewport={{ once: true }}>
           {titleCards.map(({ name, category }) => (
             <motion.div key={name} variants={cardItem}>
               <SkillCard name={name} category={category} onSkillSelect={handleCategorySelect} selectedCategory={selectedCategory} />
@@ -101,7 +104,7 @@ const Skills = () => {
           ))}
         </motion.div>
         <div className="p-3"></div>
-        <motion.div className="border-4 rounded border-neutral-content flex flex-wrap p-4 w-full max-w-4xl" id="tech" variants={staggerContainer} initial="hidden" whileInView="visible" viewport={{ once: true }}>
+        <motion.div className="flex flex-wrap w-full max-w-4xl border border-base-content/15 rounded-2xl p-4" id="tech" variants={staggerContainer} initial="hidden" whileInView="visible" viewport={{ once: true }}>
           {displayedCards.map(({ name, category }) => {
             const dimmed = selectedCategory !== '' && !category.includes(selectedCategory);
             return (

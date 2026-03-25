@@ -63,13 +63,13 @@ const Experience = () => {
   return (
     <section className="w-full py-16" id="experience">
       <div className="flex flex-col items-center px-4">
-        <motion.h1
-          className="lg:text-6xl md:text-4xl sm:text-2xl p-4 text-base-content"
-          variants={fadeInUp} initial="hidden" whileInView="visible" viewport={{ once: true }}
-        >
-          Experience
-        </motion.h1>
         <div className="relative w-full max-w-4xl mt-4 pl-8 ml-4 border-l-2 border-primary flex flex-col gap-12">
+          <motion.h1
+            className="text-3xl sm:text-4xl font-bold text-base-content"
+            variants={fadeInUp} initial="hidden" whileInView="visible" viewport={{ once: true }}
+          >
+            Experience
+          </motion.h1>
 
           {/* Chemical engineering - collapsible */}
           <motion.div className="relative" variants={fadeInUp} initial="hidden" whileInView="visible" viewport={{ once: true }}>
