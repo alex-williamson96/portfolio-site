@@ -53,8 +53,8 @@ const softwareEntries = [
   },
 ];
 
-const EntryDot = ({ }: { muted?: boolean }) => (
-  <div className="absolute -left-[39px] top-1 w-4 h-4 rounded-full border-4 border-base-100 bg-primary" />
+const EntryDot = () => (
+  <div className="absolute -left-[41px] top-1 w-4 h-4 rounded-full border-4 border-base-100 bg-primary" />
 );
 
 const Experience = () => {
@@ -73,7 +73,7 @@ const Experience = () => {
 
           {/* Chemical engineering - collapsible */}
           <motion.div className="relative" variants={fadeInUp} initial="hidden" whileInView="visible" viewport={{ once: true }}>
-            <EntryDot muted />
+            <EntryDot />
             <button
               className="flex items-center gap-2 text-left w-full group"
               onClick={() => setChemOpen(o => !o)}
