@@ -1,14 +1,16 @@
 const SkillCard = (props: { name: string, category: string[], onSkillSelect: (category: string) => void, selectedCategory: string }) => {
-
-  const defaultStyles = 'flex justify-center items-center p-3 sm:p-6 border-primary-content bg-primary hover:bg-primary-focus text-primary-content border-2 sm:text-3xl rounded-lg text-lg'
+  const isSelected = props.selectedCategory !== '' && props.category.includes(props.selectedCategory);
+  const base = 'flex justify-center items-center px-6 py-4 bg-base-200 rounded-xl text-2xl sm:text-3xl shadow-md transition-all cursor-pointer';
+  const state = isSelected
+    ? 'text-primary shadow-lg scale-105'
+    : 'text-base-content hover:shadow-lg hover:scale-105';
 
   return (
-    <div className="p-2 flex w-fit">
-      <div tabIndex={0} role="button" onClick={() => props.onSkillSelect(props.category[0])} className={!props.category.includes(props.selectedCategory) ? defaultStyles : defaultStyles + ' bg-secondary-focus text-secondary-content'}>
+    <div className="p-1 flex w-fit">
+      <div tabIndex={0} role="button" onClick={() => props.onSkillSelect(props.category[0])} className={`${base} ${state}`}>
         {props.name}
       </div>
     </div>
-
   )
 }
 

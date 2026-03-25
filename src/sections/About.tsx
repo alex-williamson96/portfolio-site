@@ -35,8 +35,6 @@ const About = () => {
     return () => clearTimeout(timeout);
   }, [displayedRole, isDeleting, roleIndex]);
 
-  const link = "text-primary underline hover:text-primary-focus visited:text-secondary"
-
   return (
     <section className="pt-16 text-base-content" id="about">
       <Helmet>
@@ -67,40 +65,41 @@ const About = () => {
           </div> */}
           <motion.div className="pl-4 sm:pl-8" variants={fadeInUp} initial="hidden" whileInView="visible" viewport={{ once: true }}>
             <h1 className="font-bold sm:text-4xl md:text-6xl text-3xl pb-4">
-              Hi, I'm Alex Williamson a <span className="text-primary">{displayedRole}<span className="animate-pulse">|</span></span>
+              Hi, I'm Alex Williamson<br />
+              <span className="text-primary">{displayedRole}<span className="animate-pulse">|</span></span>
             </h1>
             <p className="lg:py-6 md:py-4 sm:py-2 sm:text-2xl pl-4 text-2xl pb-4">I currently work at Cox Automotive where I work on
             the Data Platform team which organizes the data across all the brands Cox Automotive owns.
             </p>
-            <button className="btn btn-primary" onClick={() => setShowMore(!showMore)}>See {showMore ? 'less' : 'more'} about me</button>
+            <div className="flex justify-center">
+              <button className="btn btn-primary" onClick={() => setShowMore(!showMore)}>See {showMore ? 'less' : 'more'} about me</button>
+            </div>
           </motion.div>
         </div>
       </div>
-      <div className="flex align-middle justify-center pt-6">
-        {showMore && <motion.div className="text-2xl sm:w-3/4 justify-start p-4 bg-base-100 rounded-lg ls leading-relaxed" variants={fadeInUp} initial="hidden" animate="visible">
-          <p className="pb-8">
-            Thanks for visiting my website! Let me tell you more about myself. I am currently a software engineer with a focus on Spring Boot, AWS, and Snowflake. 
-            
-            I work on the Data Platform team focusing on automating tasks within Snowflake such as service account creation, entitlements (RBAC), and data governence.
-          </p>
-          <p className="pb-8">
-            After graduating from UGA, I worked as a chemical engineer. While I enjoyed the work, I was more interested by the data and programming aspect of my jobs.
-            I realized I wanted to pursue a career in programming, so I taught myself Python and started making projects in my free time.
-            After months of learning and working on projects, I landed a job at FedEx, where I worked for 2 years before joining Cox Automotive.
-          </p>
-          <p className="pb-8">
-            I am finishing my Masters in Computer Science at Georgia Tech (graduating May 2026).
-            Being able to fill in the knowledge gaps from my self-teaching has been extremely meaningful and is helping me to become a better software engineer.
-          </p>
-          <p className="pb-8">
-            In my free time, I like to go backpacking, play chess, and run. Feel free to reach out to me about my professional experience or if you want to talk about any of my interests.
-          </p>
-          <p className="pb-8">
-            You can <a className={link} href="mailto:recruiting@alexwilliamson.codes">email me here</a> or message me directly on <a target="_blank" className={link} href="https://www.linkedin.com/in/alex-williamson-dev" rel="noopener">LinkedIn</a>.
-          </p>
-          <p>
-            My skills are listed below along with my projects which you can also find <a target="_blank" className={link} href="https://github.com/alex-williamson96" rel="noopener">here on GitHub.</a>
-          </p>
+      <div className="flex align-middle justify-center pt-6 w-full px-4">
+        {showMore && <motion.div className="grid grid-cols-1 sm:grid-cols-2 gap-4 w-full max-w-4xl" variants={fadeInUp} initial="hidden" animate="visible">
+          <div className="bg-base-200 rounded-lg p-5 border border-base-content/10">
+            <h3 className="text-lg font-bold text-base-content mb-2">What I do</h3>
+            <p className="text-base text-base-content/70 leading-relaxed">Software engineer at Cox Automotive on the Data Platform team - building Snowflake automation, RBAC workflows, and governance tooling using Spring Boot, AWS, and Terraform.</p>
+          </div>
+          <div className="bg-base-200 rounded-lg p-5 border border-base-content/10">
+            <h3 className="text-lg font-bold text-base-content mb-2">How I got here</h3>
+            <p className="text-base text-base-content/70 leading-relaxed">Started as a chemical engineer after UGA, then taught myself Python and pivoted into software. Joined FedEx as my first dev role, then moved to Cox Automotive.</p>
+          </div>
+          <div className="bg-base-200 rounded-lg p-5 border border-base-content/10">
+            <h3 className="text-lg font-bold text-base-content mb-2">Education</h3>
+            <p className="text-base text-base-content/70 leading-relaxed">BS in Biochemical Engineering UGA. Currently finishing an MS in Computer Science at Georgia Tech (graduating May 2026), filling in the theory behind everything I learned on the job.</p>
+          </div>
+          <div className="bg-base-200 rounded-lg p-5 border border-base-content/10">
+            <h3 className="text-lg font-bold text-base-content mb-2">Outside work</h3>
+            <p className="text-base text-base-content/70 leading-relaxed mb-4">Backpacking, chess, and running. Feel free to reach out about my experience or any of these.</p>
+            <div className="flex gap-3">
+              <a className="btn btn-sm btn-primary" href="mailto:recruiting@alexwilliamson.codes">Email</a>
+              <a className="btn btn-sm btn-outline" target="_blank" href="https://www.linkedin.com/in/alex-williamson-dev" rel="noopener">LinkedIn</a>
+              <a className="btn btn-sm btn-outline" target="_blank" href="https://github.com/alex-williamson96" rel="noopener">GitHub</a>
+            </div>
+          </div>
         </motion.div>}
 
       </div>

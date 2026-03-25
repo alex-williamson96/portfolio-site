@@ -1,8 +1,8 @@
 import './App.css'
 import NavBar from './navigation/NavBar'
 import About from './sections/About'
+import Experience from './sections/Experience'
 // import Projects from './sections/Projects'
-import Resume from './sections/Resume'
 import Skills from './sections/Skills'
 import Footer from './ui/Footer'
 
@@ -14,9 +14,9 @@ function App() {
         <NavBar />
         <div className='pt-16'>
           <About />
+          <Experience />
           <Skills />
           {/* <Projects /> */}
-          <Resume />
         </div>
       </div>
       <Footer />
