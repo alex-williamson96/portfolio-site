@@ -6,8 +6,8 @@ const SkillCard = (props: { name: string, category: string[], onSkillSelect: (ca
     : 'text-base-content hover:shadow-lg hover:scale-105';
 
   return (
-    <div className="p-1 flex w-fit">
-      <div tabIndex={0} role="button" onClick={() => props.onSkillSelect(props.category[0])} className={`${base} ${state}`}>
+    <div className="p-1 flex h-full">
+      <div tabIndex={0} role="button" onClick={() => props.onSkillSelect(props.category[0])} className={`${base} ${state} w-full`}>
         {props.name}
       </div>
     </div>

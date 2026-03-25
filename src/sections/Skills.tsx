@@ -98,7 +98,7 @@ const Skills = () => {
         </motion.div>
         <motion.div className="flex flex-wrap justify-center w-full max-w-4xl border border-base-content/15 rounded-2xl p-4 gap-1" id="stack" variants={staggerContainer} initial="hidden" whileInView="visible" viewport={{ once: true }}>
           {titleCards.map(({ name, category }) => (
-            <motion.div key={name} variants={cardItem}>
+            <motion.div key={name} variants={cardItem} className="flex-1 sm:flex-none">
               <SkillCard name={name} category={category} onSkillSelect={handleCategorySelect} selectedCategory={selectedCategory} />
             </motion.div>
           ))}
