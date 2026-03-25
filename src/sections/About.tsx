@@ -67,7 +67,8 @@ const About = () => {
           </div> */}
           <motion.div className="pl-4 sm:pl-8" variants={fadeInUp} initial="hidden" whileInView="visible" viewport={{ once: true }}>
             <h1 className="font-bold sm:text-4xl md:text-6xl text-3xl pb-4">
-              Hi, I'm Alex Williamson a <span className="text-primary">{displayedRole}<span className="animate-pulse">|</span></span>
+              Hi, I'm Alex Williamson<br />
+              <span className="text-primary">{displayedRole}<span className="animate-pulse">|</span></span>
             </h1>
             <p className="lg:py-6 md:py-4 sm:py-2 sm:text-2xl pl-4 text-2xl pb-4">I currently work at Cox Automotive where I work on
             the Data Platform team which organizes the data across all the brands Cox Automotive owns.
