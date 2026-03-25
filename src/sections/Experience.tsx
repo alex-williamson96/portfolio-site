@@ -53,7 +53,7 @@ const softwareEntries = [
   },
 ];
 
-const EntryDot = ({ muted = false }: { muted?: boolean }) => (
+const EntryDot = ({ }: { muted?: boolean }) => (
   <div className="absolute -left-[39px] top-1 w-4 h-4 rounded-full border-4 border-base-100 bg-primary" />
 );
 
