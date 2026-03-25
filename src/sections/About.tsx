@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { motion, Variants } from "framer-motion";
 import { Helmet } from "react-helmet-async";
 
@@ -7,9 +7,33 @@ const fadeInUp: Variants = {
   visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: 'easeOut' } }
 }
 
+const roles = ["software engineer", "backend developer", "data platform engineer", "full stack engineer"];
+
 const About = () => {
 
   const [showMore, setShowMore] = useState(false)
+  const [displayedRole, setDisplayedRole] = useState("")
+  const [roleIndex, setRoleIndex] = useState(0)
+  const [isDeleting, setIsDeleting] = useState(false)
+
+  useEffect(() => {
+    const current = roles[roleIndex];
+    const timeout = setTimeout(() => {
+      if (!isDeleting) {
+        setDisplayedRole(current.slice(0, displayedRole.length + 1));
+        if (displayedRole.length + 1 === current.length) {
+          setTimeout(() => setIsDeleting(true), 1500);
+        }
+      } else {
+        setDisplayedRole(current.slice(0, displayedRole.length - 1));
+        if (displayedRole.length - 1 === 0) {
+          setIsDeleting(false);
+          setRoleIndex((roleIndex + 1) % roles.length);
+        }
+      }
+    }, isDeleting ? 50 : 100);
+    return () => clearTimeout(timeout);
+  }, [displayedRole, isDeleting, roleIndex]);
 
   const link = "text-primary underline hover:text-primary-focus visited:text-secondary"
 
@@ -42,7 +66,9 @@ const About = () => {
             <img src="./assets/alex2.jpg" className="scale-110" alt="Alex Williamson - Software Engineer"/>
           </div> */}
           <motion.div className="pl-4 sm:pl-8" variants={fadeInUp} initial="hidden" whileInView="visible" viewport={{ once: true }}>
-            <h1 className="font-bold sm:text-4xl md:text-6xl text-3xl pb-4">Hi, I'm Alex Williamson a software engineer</h1>
+            <h1 className="font-bold sm:text-4xl md:text-6xl text-3xl pb-4">
+              Hi, I'm Alex Williamson a <span className="text-primary">{displayedRole}<span className="animate-pulse">|</span></span>
+            </h1>
             <p className="lg:py-6 md:py-4 sm:py-2 sm:text-2xl pl-4 text-2xl pb-4">I currently work at Cox Automotive where I work on
             the Data Platform team which organizes the data across all the brands Cox Automotive owns.
             </p>
