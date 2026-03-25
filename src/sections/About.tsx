@@ -32,9 +32,9 @@ const About = () => {
 </Helmet>
       <div className="hero">
         <div className="hero-content flex-col lg:flex-row">
-          <div className="max-w-xs md:max-w-sm sm:w-full rounded-lg shadow-2xl mask mask-squircle">
+          {/* <div className="max-w-xs md:max-w-sm sm:w-full rounded-lg shadow-2xl mask mask-squircle">
             <img src="./assets/alex2.jpg" className="scale-110" alt="Alex Williamson - Software Engineer"/>
-          </div>
+          </div> */}
           <div className="pl-4 sm:pl-8">
             <h1 className="font-bold sm:text-4xl md:text-6xl text-3xl pb-4">Hi, I'm Alex Williamson a software engineer</h1>
             <p className="lg:py-6 md:py-4 sm:py-2 sm:text-2xl pl-4 text-2xl pb-4">I currently work at Cox Automotive where I work on
