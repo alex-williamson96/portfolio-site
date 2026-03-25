@@ -1,5 +1,11 @@
 import { useState } from "react";
+import { motion, Variants } from "framer-motion";
 import { Helmet } from "react-helmet-async";
+
+const fadeInUp: Variants = {
+  hidden: { opacity: 0, y: 24 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: 'easeOut' } }
+}
 
 const About = () => {
 
@@ -35,17 +41,17 @@ const About = () => {
           {/* <div className="max-w-xs md:max-w-sm sm:w-full rounded-lg shadow-2xl mask mask-squircle">
             <img src="./assets/alex2.jpg" className="scale-110" alt="Alex Williamson - Software Engineer"/>
           </div> */}
-          <div className="pl-4 sm:pl-8">
+          <motion.div className="pl-4 sm:pl-8" variants={fadeInUp} initial="hidden" whileInView="visible" viewport={{ once: true }}>
             <h1 className="font-bold sm:text-4xl md:text-6xl text-3xl pb-4">Hi, I'm Alex Williamson a software engineer</h1>
             <p className="lg:py-6 md:py-4 sm:py-2 sm:text-2xl pl-4 text-2xl pb-4">I currently work at Cox Automotive where I work on
             the Data Platform team which organizes the data across all the brands Cox Automotive owns.
             </p>
             <button className="btn btn-primary" onClick={() => setShowMore(!showMore)}>See {showMore ? 'less' : 'more'} about me</button>
-          </div>
+          </motion.div>
         </div>
       </div>
       <div className="flex align-middle justify-center pt-6">
-        {showMore && <div className="text-2xl sm:w-3/4 justify-start p-4 bg-base-100 rounded-lg ls leading-relaxed">
+        {showMore && <motion.div className="text-2xl sm:w-3/4 justify-start p-4 bg-base-100 rounded-lg ls leading-relaxed" variants={fadeInUp} initial="hidden" animate="visible">
           <p className="pb-8">
             Thanks for visiting my website! Let me tell you more about myself. I am currently a software engineer with a focus on Spring Boot, AWS, and Snowflake. 
             
@@ -69,7 +75,7 @@ const About = () => {
           <p>
             My skills are listed below along with my projects which you can also find <a target="_blank" className={link} href="https://github.com/alex-williamson96" rel="noopener">here on GitHub.</a>
           </p>
-        </div>}
+        </motion.div>}
 
       </div>
     </section>

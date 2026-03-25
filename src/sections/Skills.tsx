@@ -1,5 +1,21 @@
 import { useState } from "react";
+import { motion, Variants } from "framer-motion";
 import SkillCard from "../ui/SkillCard";
+
+const fadeInUp: Variants = {
+  hidden: { opacity: 0, y: 24 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: 'easeOut' } }
+}
+
+const staggerContainer: Variants = {
+  hidden: {},
+  visible: { transition: { staggerChildren: 0.03 } }
+}
+
+const cardItem: Variants = {
+  hidden: { opacity: 0, scale: 0.9 },
+  visible: { opacity: 1, scale: 1, transition: { duration: 0.15, ease: 'easeOut' } }
+}
 
 const Skills = () => {
 
@@ -85,18 +101,22 @@ const Skills = () => {
     <section className="w-screen" id="skills">
       <div className="pl-4 pr-4 flex justify-center w-screen">
         <div className="flex h-screen flex-col justify-center items-center w-screen">
-          <h1 className="lg:text-6xl md:text-4xl sm:text-2xl p-4 text-base-content">Skills</h1>
-          <div className="sm:h-1/5 border-4 rounded border-neutral-content flex items-center sm:justify-between w-4/5 sm:p-6 pl:4 overflow-x-scroll h-auto min-h-1/5" id="stack">
+          <motion.h1 className="lg:text-6xl md:text-4xl sm:text-2xl p-4 text-base-content" variants={fadeInUp} initial="hidden" whileInView="visible" viewport={{ once: true }}>Skills</motion.h1>
+          <motion.div className="sm:h-1/5 border-4 rounded border-neutral-content flex items-center sm:justify-between w-4/5 sm:p-6 pl:4 overflow-x-scroll h-auto min-h-1/5" id="stack" variants={staggerContainer} initial="hidden" whileInView="visible" viewport={{ once: true }}>
             {titleCards.map(({ name, category }) => (
-              <SkillCard key={name} name={name} category={category} onSkillSelect={handleCategorySelect} selectedCategory={selectedCategory} />
+              <motion.div key={name} variants={cardItem}>
+                <SkillCard name={name} category={category} onSkillSelect={handleCategorySelect} selectedCategory={selectedCategory} />
+              </motion.div>
             ))}
-          </div>
+          </motion.div>
           <div className="p-3"></div>
-          <div className="border-4 rounded border-neutral-content flex items-start flex-wrap p-4 content-start h-auto overflow-scroll w-4/5" id="tech">
+          <motion.div className="border-4 rounded border-neutral-content flex items-start flex-wrap p-4 content-start h-auto overflow-scroll w-4/5" id="tech" variants={staggerContainer} initial="hidden" whileInView="visible" viewport={{ once: true }}>
             {shuffleArray(filteredSkillCards).map(({ name, category }) => (
-              <SkillCard key={name} name={name} category={category} onSkillSelect={handleCategorySelect} selectedCategory="" />
+              <motion.div key={name} variants={cardItem}>
+                <SkillCard name={name} category={category} onSkillSelect={handleCategorySelect} selectedCategory="" />
+              </motion.div>
             ))}
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>
