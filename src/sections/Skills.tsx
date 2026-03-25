@@ -78,12 +78,7 @@ const Skills = () => {
     return arr;
   }, []);
 
-  const displayedCards = selectedCategory === ''
-    ? shuffledSkillCards
-    : [
-        ...shuffledSkillCards.filter(c => c.category.includes(selectedCategory)),
-        ...shuffledSkillCards.filter(c => !c.category.includes(selectedCategory)),
-      ];
+  const displayedCards = shuffledSkillCards;
 
   const handleCategorySelect = (category: string) => {
     setSelectedCategory(prev => prev === category ? '' : category);
@@ -92,9 +87,8 @@ const Skills = () => {
   return (
     <section className="w-full py-16" id="skills">
       <div className="flex flex-col items-center px-4">
-        <motion.div className="flex flex-col items-center mb-6" variants={fadeInUp} initial="hidden" whileInView="visible" viewport={{ once: true }}>
+        <motion.div className="flex flex-col mb-6 w-full max-w-4xl" variants={fadeInUp} initial="hidden" whileInView="visible" viewport={{ once: true }}>
           <h1 className="text-3xl sm:text-4xl font-bold text-base-content">Skills</h1>
-          <div className="w-12 h-1 bg-primary rounded mt-2" />
         </motion.div>
         <motion.div className="flex flex-wrap justify-center w-full max-w-4xl border border-base-content/15 rounded-2xl p-4 gap-1" id="stack" variants={staggerContainer} initial="hidden" whileInView="visible" viewport={{ once: true }}>
           {titleCards.map(({ name, category }) => (

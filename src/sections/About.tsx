@@ -72,7 +72,7 @@ const About = () => {
             the Data Platform team which organizes the data across all the brands Cox Automotive owns.
             </p>
             <div className="flex justify-center">
-              <button className="btn btn-primary" onClick={() => setShowMore(!showMore)}>See {showMore ? 'less' : 'more'} about me</button>
+              <button className="btn btn-primary btn-lg" onClick={() => setShowMore(!showMore)}>See {showMore ? 'less' : 'more'} about me</button>
             </div>
           </motion.div>
         </div>

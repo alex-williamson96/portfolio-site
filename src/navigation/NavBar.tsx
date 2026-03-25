@@ -17,7 +17,7 @@ const NavBar = () => {
 
     window.scrollTo({
       behavior: 'smooth',
-      top: el.offsetTop
+      top: el.getBoundingClientRect().top + window.scrollY - 64
     })
   }
 
