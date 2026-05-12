@@ -1,0 +1,53 @@
+# Alex Williamson
+
+> Software engineer specializing in Spring Boot, AWS, and data platforms. Currently a Software Engineer II at Cox Automotive on the Data Platform team, and a Georgia Tech OMSCS student graduating May 2026.
+
+Site: https://alexwilliamson.codes/
+Contact: recruiting@alexwilliamson.codes
+LinkedIn: https://www.linkedin.com/in/alex-williamson-dev
+GitHub: https://github.com/alex-williamson96
+
+## About
+
+Alex Williamson is a software engineer based in Atlanta, GA. He works at Cox Automotive on the Data Platform team, which organizes data across all the brands Cox Automotive owns. His focus areas include Snowflake automation, RBAC workflows, and governance tooling built with Spring Boot, AWS, and Terraform.
+
+Career path: started as a chemical engineer after UGA, taught himself Python, and pivoted into software - first at FedEx, now at Cox Automotive. Currently finishing an MS in Computer Science at Georgia Tech (graduating May 2026).
+
+Outside work: backpacking, chess, and running.
+
+## Experience
+
+### Cox Automotive - Software Engineer II (Mar 2024 - Present, Atlanta, GA)
+- Built and maintained Snowflake automation and governance microservices on the Data Platform using Spring Boot, AWS, Terraform, and Python.
+- Created an AI troubleshooting Slack bot using RAG over an indexed knowledge base, integrated with a custom MCP server via Amazon Bedrock AgentCore for real-time CloudWatch log querying.
+- Led development of a temporary Snowflake role access workflow with break-glass controls, duration-based approvals, and end-to-end auditing.
+
+### FedEx Services - Full Stack Developer II (Feb 2022 - Mar 2024, Remote)
+- Led development of two full-stack applications (an incident tracking platform and a server dashboard) using Spring Boot, React, and Angular.
+- Migrated authentication from header-based auth to OAuth 2.0 PKCE flow using Okta, configuring HTTPS, SSL certificates, and new load balancers.
+- Optimized CSS build pipeline achieving a 300% reduction in compile time and 75% reduction in file size.
+
+### Takeda - Production Engineer (Aug 2021 - Feb 2022, Social Circle, GA)
+- Diagnosed and resolved production issues for purification processes using DeltaV, EBM, and SQL to reduce user interventions and track batch data trends.
+
+### Danimer Scientific - Process Engineer (Jul 2020 - Jul 2021, Bainbridge, GA)
+- Designed and executed projects improving workplace safety, product quality, and process efficiency.
+- Ran scale-up and scale-down experiments for commercial processes and assisted in fermentation and downstream processing operations.
+
+## Education
+
+- MS in Computer Science, Georgia Institute of Technology (OMSCS), graduating May 2026
+- BS in Biochemical Engineering, University of Georgia
+
+## Skills
+
+Languages: Java, Python, TypeScript, JavaScript, SQL, Groovy, HTML, CSS
+Backend: Spring Boot, AWS Lambda, JUnit, Mockito, Maven
+Frontend: React, Angular
+Databases: Snowflake, PostgreSQL, MySQL
+Cloud: AWS, AWS IAM, Snowflake, Amazon Bedrock, CloudWatch
+Tools: Terraform, Docker, Jenkins, GitHub Actions, Git, GitHub, Postman, New Relic, RAG, MCP
+
+## Resume
+
+PDF: https://alexwilliamson.codes/assets/resume.pdf
