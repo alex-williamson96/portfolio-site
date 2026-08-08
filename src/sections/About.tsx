@@ -7,11 +7,11 @@ const fadeInUp: Variants = {
   visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: 'easeOut' } }
 }
 
-const roles = ["software engineer", "backend developer", "data platform engineer", "full stack engineer"];
+const roles = ["software engineer", "backend developer", "applied AI engineer", "data platform engineer", "full stack engineer"];
 
 const About = () => {
 
-  const [showMore, setShowMore] = useState(false)
+  const [showMore, setShowMore] = useState(true)
   const [displayedRole, setDisplayedRole] = useState("")
   const [roleIndex, setRoleIndex] = useState(0)
   const [isDeleting, setIsDeleting] = useState(false)
@@ -38,31 +38,28 @@ const About = () => {
   return (
     <section className="pt-16 text-base-content" id="about">
       <Helmet>
-  <title>Alex Williamson - Software Engineer</title>
-  <meta name="description" content="Software engineer specializing in Spring Boot, AWS, and data platforms. Currently at Cox Automotive and Georgia Tech OMSCS student." />
-  
-  {/* Open Graph Tags */}
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://alexwilliamson.codes/" />
-  <meta property="og:title" content="Alex Williamson - Software Engineer" />
-  <meta property="og:description" content="Software engineer specializing in Spring Boot, AWS, and data platforms. Currently at Cox Automotive and Georgia Tech OMSCS student." />
-  <meta property="og:image" content="https://alexwilliamson.codes/preview-image.png" />
-  <meta property="og:image:width" content="1200" />
-  <meta property="og:image:height" content="630" />
-  <meta property="og:image:alt" content="Alex Williamson - Software Engineer Portfolio" />
-  
-  {/* Twitter Cards */}
-  <meta property="twitter:card" content="summary_large_image" />
-  <meta property="twitter:url" content="https://alexwilliamson.codes/" />
-  <meta property="twitter:title" content="Alex Williamson - Software Engineer" />
-  <meta property="twitter:description" content="Software engineer specializing in Spring Boot, AWS, and data platforms. Currently at Cox Automotive and Georgia Tech OMSCS student." />
-  <meta property="twitter:image" content="https://alexwilliamson.codes/preview-image.png" />
-</Helmet>
+        <title>Alex Williamson - Software Engineer</title>
+        <meta name="description" content="Software engineer specializing in Spring Boot, AWS, and data platforms. Currently at Cox Automotive, with an MS in Computer Science from Georgia Tech." />
+
+        {/* Open Graph Tags */}
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://alexwilliamson.codes/" />
+        <meta property="og:title" content="Alex Williamson - Software Engineer" />
+        <meta property="og:description" content="Software engineer specializing in Spring Boot, AWS, and data platforms. Currently at Cox Automotive, with an MS in Computer Science from Georgia Tech." />
+        <meta property="og:image" content="https://alexwilliamson.codes/preview-image.png" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta property="og:image:alt" content="Alex Williamson - Software Engineer Portfolio" />
+
+        {/* Twitter Cards */}
+        <meta property="twitter:card" content="summary_large_image" />
+        <meta property="twitter:url" content="https://alexwilliamson.codes/" />
+        <meta property="twitter:title" content="Alex Williamson - Software Engineer" />
+        <meta property="twitter:description" content="Software engineer specializing in Spring Boot, AWS, and data platforms. Currently at Cox Automotive, with an MS in Computer Science from Georgia Tech." />
+        <meta property="twitter:image" content="https://alexwilliamson.codes/preview-image.png" />
+      </Helmet>
       <div className="hero">
         <div className="hero-content flex-col lg:flex-row">
-          {/* <div className="max-w-xs md:max-w-sm sm:w-full rounded-lg shadow-2xl mask mask-squircle">
-            <img src="./assets/alex2.jpg" className="scale-110" alt="Alex Williamson - Software Engineer"/>
-          </div> */}
           <motion.div className="pl-4 sm:pl-8" variants={fadeInUp} initial="hidden" whileInView="visible" viewport={{ once: true }}>
             <h1 className="font-bold sm:text-4xl md:text-6xl text-3xl pb-4">
               Hi, I'm Alex Williamson<br />
@@ -89,7 +86,7 @@ const About = () => {
           </div>
           <div className="bg-base-200 rounded-lg p-5 border border-base-content/10">
             <h3 className="text-lg font-bold text-base-content mb-2">Education</h3>
-            <p className="text-base text-base-content/70 leading-relaxed">BS in Biochemical Engineering UGA. Currently finishing an MS in Computer Science at Georgia Tech (graduating May 2026), filling in the theory behind everything I learned on the job.</p>
+            <p className="text-base text-base-content/70 leading-relaxed">BS in Biochemical Engineering, UGA. MS in Computer Science, Georgia Tech (2026), filling in the theory behind everything I learned on the job.</p>
           </div>
           <div className="bg-base-200 rounded-lg p-5 border border-base-content/10">
             <h3 className="text-lg font-bold text-base-content mb-2">Outside work</h3>

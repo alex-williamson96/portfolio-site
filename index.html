@@ -5,13 +5,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="shortcut icon" type="image/x-icon" href="favicon.ico?" />
     <title>Alex Williamson - Software Engineer</title>
+
+    <!--
+      Resolves the theme before first paint so there is no flash. This has to be a
+      synchronous inline script, which means it cannot import src/ui/themes.ts —
+      the two theme arrays below are a deliberate duplicate. Keep them in sync;
+      themes.ts is canonical, and both must stay a subset of tailwind.config.js.
+    -->
+    <script>
+      (function () {
+        var light = ["light","cupcake","bumblebee","emerald","corporate","retro","valentine","garden","lofi","pastel","fantasy","wireframe","cmyk","autumn","acid","lemonade","winter"];
+        var dark = ["dark","synthwave","halloween","forest","aqua","black","luxury","dracula","business","night","coffee"];
+        try {
+          var scheme = localStorage.getItem("theme-scheme") || "system";
+          var isDark = scheme === "system"
+            ? window.matchMedia("(prefers-color-scheme: dark)").matches
+            : scheme === "dark";
+          var theme;
+          if (localStorage.getItem("theme-random") === "on") {
+            var pool = isDark ? dark : light;
+            theme = pool[Math.floor(Math.random() * pool.length)];
+          } else {
+            theme = isDark ? "dark" : "winter";
+          }
+          document.documentElement.setAttribute("data-theme", theme);
+        } catch (e) {
+          /* localStorage blocked (private mode, embedded) — keep the markup default */
+        }
+      })();
+    </script>
     
-    <meta name="description" content="Software engineer specializing in Spring Boot, AWS, and data platforms. Currently at Cox Automotive and Georgia Tech OMSCS student." />
+    <meta name="description" content="Software engineer specializing in Spring Boot, AWS, and data platforms. Currently at Cox Automotive, with an MS in Computer Science from Georgia Tech." />
     
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://alexwilliamson.codes/" />
     <meta property="og:title" content="Alex Williamson - Software Engineer" />
-    <meta property="og:description" content="Software engineer specializing in Spring Boot, AWS, and data platforms. Currently at Cox Automotive and Georgia Tech OMSCS student." />
+    <meta property="og:description" content="Software engineer specializing in Spring Boot, AWS, and data platforms. Currently at Cox Automotive, with an MS in Computer Science from Georgia Tech." />
     <meta property="og:image" content="https://alexwilliamson.codes/preview-image.png" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
@@ -19,7 +48,7 @@
     <meta property="twitter:card" content="summary_large_image" />
     <meta property="twitter:url" content="https://alexwilliamson.codes/" />
     <meta property="twitter:title" content="Alex Williamson - Software Engineer" />
-    <meta property="twitter:description" content="Software engineer specializing in Spring Boot, AWS, and data platforms. Currently at Cox Automotive and Georgia Tech OMSCS student." />
+    <meta property="twitter:description" content="Software engineer specializing in Spring Boot, AWS, and data platforms. Currently at Cox Automotive, with an MS in Computer Science from Georgia Tech." />
     <meta property="twitter:image" content="https://alexwilliamson.codes/preview-image.png" />
 
     <script type="application/ld+json">
@@ -43,7 +72,7 @@
           "name": "University of Georgia"
         }
       ],
-      "knowsAbout": ["Java", "Spring Boot", "AWS", "Snowflake", "Python", "TypeScript", "Data Platforms"],
+      "knowsAbout": ["Java", "Spring Boot", "AWS", "Snowflake", "Python", "TypeScript", "Data Platforms", "Terraform", "React", "RAG", "Model Context Protocol", "Amazon Bedrock", "LLM applications"],
       "sameAs": [
         "https://www.linkedin.com/in/alex-williamson-dev",
         "https://github.com/alex-williamson96"

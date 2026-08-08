@@ -26,7 +26,6 @@ const NavBar = () => {
       <button className="btn btn-ghost normal-case sm:text-3xl text-s" onClick={() => goToSection('about')}>About</button>
       <button className="btn btn-ghost normal-case sm:text-3xl text-s" onClick={() => goToSection('experience')}>Experience</button>
       <button className="btn btn-ghost normal-case sm:text-3xl text-s" onClick={() => goToSection('skills')}>Skills</button>
-      {/* <button className="btn btn-ghost normal-case sm:text-3xl text-s" onClick={() => goToSection('projects')}>Projects</button> */}
       <Theme />
     </motion.div>
   )

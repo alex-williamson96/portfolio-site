@@ -35,9 +35,10 @@ const softwareEntries = [
     dates: "Feb 2022 – Mar 2024",
     location: "Remote",
     bullets: [
-      "Led development of two full-stack applications — an incident tracking platform and a server dashboard — using Spring Boot, React, and Angular",
-      "Migrated authentication from header-based auth to OAuth 2.0 PKCE flow using Okta, configuring HTTPS, SSL certificates, and new load balancers",
-      "Optimized CSS build pipeline achieving a 300% reduction in compile time and 75% reduction in file size",
+      "Shipped two production full-stack applications — an incident tracking platform and a crisis communications dashboard — using Spring Boot, React, Angular, and Java, serving hundreds of FedEx operations users",
+      "Migrated two Spring Boot services from header-based auth to OAuth 2.0 PKCE flow with Okta, including HTTPS/SSL configuration, key store provisioning, and load balancer setup",
+      "Engineered dynamic search and pagination for the incident-reporting app using Spring Data JPA, enabling operations users to query past entries and build custom reports without engineering involvement",
+      "Integrated Nexus IQ, SonarQube, and Fortify scans into the Jenkins CI/CD pipeline, automating security and static analysis checks to enforce open-source compliance before deploy",
     ],
   },
   {
@@ -46,9 +47,12 @@ const softwareEntries = [
     dates: "Mar 2024 – Present",
     location: "Atlanta, GA",
     bullets: [
-      "Built and maintained Snowflake automation and governance microservices on the Data Platform using Spring Boot, AWS, Terraform, and Python",
-      "Created an AI troubleshooting Slack bot using RAG over an indexed knowledge base, integrated with a custom MCP server via Amazon Bedrock AgentCore for real-time CloudWatch log querying",
-      "Led development of a temporary Snowflake role access workflow with break-glass controls, duration-based approvals, and end-to-end auditing",
+      "Owned and operated production Snowflake governance microservices on the Data Platform, serving data and engineering teams across Cox Automotive, using Java, Spring Boot, AWS (Lambda, EventBridge, S3, EKS), Terraform, Docker, and Python",
+      "Designed an AI troubleshooting Slack bot in Python on the Strands Agents SDK, using RAG over internal GitHub repositories, wikis, and SharePoint sites with Amazon S3 Vectors for retrieval, integrated with a custom MCP server built in FastAPI on Amazon Bedrock AgentCore that queries CloudWatch logs in real time to accelerate on-call incident triage",
+      "Architected an event-driven classification microservice that processes DDL events across roughly 200,000 Snowflake tables, with readiness gating, async orchestration with retry, and override paths for known classifications",
+      "Built a real-time data pipeline syncing Snowflake to Monte Carlo for over 1,000 datasets, propagating permissions and metadata within minutes and driving platform-wide data quality monitoring adoption",
+      "Redesigned Snowflake temporary and break-glass access, extending supported durations from 4 hours to 2 weeks and adding an independent grant-history audit layer that alerts within minutes on any grant issued outside the approved workflow",
+      "Led rollout of Snowflake network-rule enforcement across 2,000 service accounts, requiring approved network rules for connectivity to restrict access by IP and close a class of network-perimeter risks",
     ],
   },
 ];

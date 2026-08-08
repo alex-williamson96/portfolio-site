@@ -1,6 +1,6 @@
 # Alex Williamson
 
-> Software engineer specializing in Spring Boot, AWS, and data platforms. Currently a Software Engineer II at Cox Automotive on the Data Platform team, and a Georgia Tech OMSCS student graduating May 2026.
+> Software engineer specializing in Spring Boot, AWS, and data platforms. Currently a Software Engineer II at Cox Automotive on the Data Platform team, with an MS in Computer Science from Georgia Tech (2026).
 
 Site: https://alexwilliamson.codes/
 Contact: recruiting@alexwilliamson.codes
@@ -9,23 +9,27 @@ GitHub: https://github.com/alex-williamson96
 
 ## About
 
-Alex Williamson is a software engineer based in Atlanta, GA. He works at Cox Automotive on the Data Platform team, which organizes data across all the brands Cox Automotive owns. His focus areas include Snowflake automation, RBAC workflows, and governance tooling built with Spring Boot, AWS, and Terraform.
+Alex Williamson is a software engineer based in Atlanta, GA. He works at Cox Automotive on the Data Platform team, which organizes data across all the brands Cox Automotive owns. His focus areas include Snowflake automation, RBAC workflows, governance tooling, and applied AI built with Spring Boot, AWS, Terraform, and Python.
 
-Career path: started as a chemical engineer after UGA, taught himself Python, and pivoted into software - first at FedEx, now at Cox Automotive. Currently finishing an MS in Computer Science at Georgia Tech (graduating May 2026).
+Career path: started as a chemical engineer after UGA, taught himself Python, and pivoted into software - first at FedEx, now at Cox Automotive. Holds an MS in Computer Science from Georgia Tech (2026).
 
 Outside work: backpacking, chess, and running.
 
 ## Experience
 
 ### Cox Automotive - Software Engineer II (Mar 2024 - Present, Atlanta, GA)
-- Built and maintained Snowflake automation and governance microservices on the Data Platform using Spring Boot, AWS, Terraform, and Python.
-- Created an AI troubleshooting Slack bot using RAG over an indexed knowledge base, integrated with a custom MCP server via Amazon Bedrock AgentCore for real-time CloudWatch log querying.
-- Led development of a temporary Snowflake role access workflow with break-glass controls, duration-based approvals, and end-to-end auditing.
+- Owned and operated production Snowflake governance microservices on the Data Platform, serving data and engineering teams across Cox Automotive, using Java, Spring Boot, AWS (Lambda, EventBridge, S3, EKS), Terraform, Docker, and Python.
+- Designed an AI troubleshooting Slack bot in Python on the Strands Agents SDK, using RAG over internal GitHub repositories, wikis, and SharePoint sites with Amazon S3 Vectors for retrieval, integrated with a custom MCP server built in FastAPI on Amazon Bedrock AgentCore that queries CloudWatch logs in real time to accelerate on-call incident triage.
+- Architected an event-driven classification microservice that processes DDL events across roughly 200,000 Snowflake tables, with readiness gating, async orchestration with retry, and override paths for known classifications.
+- Built a real-time data pipeline syncing Snowflake to Monte Carlo for over 1,000 datasets, propagating permissions and metadata within minutes and driving platform-wide data quality monitoring adoption.
+- Redesigned Snowflake temporary and break-glass access, extending supported durations from 4 hours to 2 weeks and adding an independent grant-history audit layer that alerts within minutes on any grant issued outside the approved workflow.
+- Led rollout of Snowflake network-rule enforcement across 2,000 service accounts, requiring approved network rules for connectivity to restrict access by IP and close a class of network-perimeter risks.
 
 ### FedEx Services - Full Stack Developer II (Feb 2022 - Mar 2024, Remote)
-- Led development of two full-stack applications (an incident tracking platform and a server dashboard) using Spring Boot, React, and Angular.
-- Migrated authentication from header-based auth to OAuth 2.0 PKCE flow using Okta, configuring HTTPS, SSL certificates, and new load balancers.
-- Optimized CSS build pipeline achieving a 300% reduction in compile time and 75% reduction in file size.
+- Shipped two production full-stack applications (an incident tracking platform and a crisis communications dashboard) using Spring Boot, React, Angular, and Java, serving hundreds of FedEx operations users.
+- Migrated two Spring Boot services from header-based auth to OAuth 2.0 PKCE flow with Okta, including HTTPS/SSL configuration, key store provisioning, and load balancer setup.
+- Engineered dynamic search and pagination for the incident-reporting app using Spring Data JPA, enabling operations users to query past entries and build custom reports without engineering involvement.
+- Integrated Nexus IQ, SonarQube, and Fortify scans into the Jenkins CI/CD pipeline, automating security and static analysis checks to enforce open-source compliance before deploy.
 
 ### Takeda - Production Engineer (Aug 2021 - Feb 2022, Social Circle, GA)
 - Diagnosed and resolved production issues for purification processes using DeltaV, EBM, and SQL to reduce user interventions and track batch data trends.
@@ -36,17 +40,19 @@ Outside work: backpacking, chess, and running.
 
 ## Education
 
-- MS in Computer Science, Georgia Institute of Technology (OMSCS), graduating May 2026
+- MS in Computer Science, Georgia Institute of Technology (OMSCS), 2026
 - BS in Biochemical Engineering, University of Georgia
 
 ## Skills
 
-Languages: Java, Python, TypeScript, JavaScript, SQL, Groovy, HTML, CSS
-Backend: Spring Boot, AWS Lambda, JUnit, Mockito, Maven
+Languages: Java, Python, TypeScript, JavaScript, SQL, HTML, CSS
+Backend: Spring Boot, FastAPI, REST APIs, Spring Data JPA, OAuth 2.0, distributed systems, microservices, event-driven architecture, data pipelines
 Frontend: React, Angular
 Databases: Snowflake, PostgreSQL, MySQL
-Cloud: AWS, AWS IAM, Snowflake, Amazon Bedrock, CloudWatch
-Tools: Terraform, Docker, Jenkins, GitHub Actions, Git, GitHub, Postman, New Relic, RAG, MCP
+Cloud & Infrastructure: AWS (Lambda, EKS, CloudWatch, S3, EventBridge, Bedrock, IAM, SQS), Docker, Terraform, Jenkins, GitHub Actions
+AI/ML: RAG, Strands Agents SDK, Amazon Bedrock, Bedrock AgentCore, Amazon S3 Vectors, Model Context Protocol (MCP), Langfuse
+Testing & Code Quality: JUnit, Mockito, SonarQube, Nexus IQ, Fortify
+Tools: Git, GitHub, Postman, Maven
 
 ## Resume
 
